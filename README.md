@@ -4,7 +4,7 @@ Code for a biased PRNG written in Python using Pemuted Congruential Generator(PC
 
 ## Working
 
-It generated numbers between 1 to 10 with a bias of 73% for numbers greater than 5.
+It generates numbers between 1 to 10 with a bias of 73% for numbers greater than 5.
 The bias is introduced by a simple if/else check on the number returned by the random number generator.
 The probabity of getting any number is equal. So if the number returned(normalized to fall between 0 and 1) is less than 0.73, keep calling the generator until it produce a number between [6-10], else wait for it to return number [1-5]. 
 This if/else condition biases the output as aforementioned because the chances of number returned being less than 0.73 is 73% since the generator itself is not biased. 
